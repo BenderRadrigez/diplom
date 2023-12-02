@@ -1,10 +1,14 @@
+@import "../../../App.scss";
+
 .buttons_nav {
     display: flex;
-    // gap: %;
   button {
     background: none;
     width: 110px;
     border: none;
     cursor: pointer;
+  }
+  button:hover{
+    color: $green;
   }
 }
