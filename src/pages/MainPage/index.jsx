@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import Header from "../../components/header";
 
 export default function Main() {
   return (
-    <div>Main</div>
-  )
+    <div>
+      <Header />
+      <div>MainPage</div>
+    </div>
+  );
 }

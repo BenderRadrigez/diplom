@@ -4,11 +4,16 @@
     justify-content: space-between;
     width: 100vw;
     max-width: 1440px;
-    padding: 1%;
+    padding-top: 10px;
+
+    img{
+        max-height: 70px;
+    }
 
     .basket{
         border: none;
         background: none;
         cursor: pointer;
+        max-width: 48px;
     }
 }
