@@ -13,14 +13,7 @@
         }
     
         .goHomeBtn{
-            width: 284px;
-            padding: 10px;
-            background: $green;
-            color: #fff;
-            font-size: 20px;
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
+            @include greenBtn;
         }
     }
 }

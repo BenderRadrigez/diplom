@@ -2,8 +2,8 @@ import React from "react";
 import NavMenu from "./nav_menu";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
-import basket from "../../assets/images/icons/basket=empty.svg";
 import style from "./style.module.scss";
+import Basket from "./basket";
 
 export default function Header() {
   return (
@@ -14,9 +14,7 @@ export default function Header() {
 
       <NavMenu />
 
-      <button className={style.basket}>
-        <img src={basket} alt="basket" />
-      </button>
+      < Basket/>
     </div>
   );
 }

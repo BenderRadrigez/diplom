@@ -1,0 +1,25 @@
+@import "../../../App.scss";
+
+.basket{
+    cursor: pointer;
+    max-width: 50px;
+    max-height: 50px;
+    position: relative;
+    
+    .counter{
+        position: absolute;
+        top: 15%;
+        background: $green;
+        color: #fff;
+        width: 25px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        font-size: small;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hide{
+        display: none;
+    }
+}
