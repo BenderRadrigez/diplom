@@ -1,5 +1,8 @@
 $green: #339933;
 $textSize: 64px;
+$maxWidth: 1360px;
+
+
 @mixin greenBtn {
   width: 284px;
   padding: 10px;
@@ -9,6 +12,39 @@ $textSize: 64px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+@mixin headers_h {
+  h2 {
+    font-size: 64px;
+    margin-right: 3%;
+  }
+  .line_and_button {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .headers_h_line {
+      width: 100%;
+      height: 1px;
+      background: #ddd;
+    }
+    button {
+      width: 170px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      background: none;
+      color: #8b8b8b;
+      cursor: pointer;
+    }
+    button:hover {
+      color: #000;
+    }
+    button:focus {
+      background: #f1f3f4;
+    }
+  }
 }
 
 @font-face {
