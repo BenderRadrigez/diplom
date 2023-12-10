@@ -6,7 +6,7 @@
   justify-content: center;
   margin: 5vh 0;
   width: $maxWidth;
-  
+
   .headers_h {
     width: 100%;
     display: flex;
@@ -14,9 +14,21 @@
     @include headers_h;
   }
 
-  .slides_for_categorries{
-    background: #000;
+  .slides_for_categorries {
     width: 100%;
-    height: 418px;
+    display: flex;
+
+    .slide {
+      padding: 20px 0;
+      text-align: center;
+      img{
+        width: 100%;
+        height: 350px;
+        border-radius: 15px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
+

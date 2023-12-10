@@ -6,11 +6,18 @@ import Sales from "../../components/main/main_page/sale";
 
 export default function Main() {
   return (
-    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Banner />
-      <CategoriesMain/>
-      <GetDiscount/>
-      <Sales/>
+      <CategoriesMain />
+      <GetDiscount />
+      <Sales />
     </div>
   );
 }

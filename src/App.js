@@ -14,7 +14,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="categories" element={<Categories />} />
+        <Route path="/categories" element={<Categories />} />
         <Route path="/all_products" element={<AllProducts />} />
         <Route path="/all_sales" element={<Sales />} />
         <Route path="*" element={<Error />} />
