@@ -3,8 +3,9 @@ import style from "./style.module.scss"
 import image from "../../../../assets/images/image_for_the_discont_banner.svg";
 
 export default function GetDiscount() {
+  const classes = `${style.discount_section} discount_section`
   return (
-    <div className={style.discount_section}>
+    <div className={classes}>
         <h3>5% off on the first order</h3>
         <div className={style.conteiner}>
             <img src={image} alt="img" />
