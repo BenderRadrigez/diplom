@@ -6,7 +6,7 @@ import Sales from "../../components/main/main_page/sale";
 
 export default function Main() {
   return (
-    <div
+    <main
       style={{
         display: "flex",
         flexDirection: "column",
@@ -18,6 +18,6 @@ export default function Main() {
       <CategoriesMain />
       <GetDiscount />
       <Sales />
-    </div>
+    </main>
   );
 }

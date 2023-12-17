@@ -4,9 +4,9 @@ import style from "./style.module.scss";
 
 export default function Footer() {
   return (
-    <div className={style.footer}>
+    <footer className={style.footer}>
       <h2>Contact</h2>
       <AboutUs />
-    </div>
+    </footer>
   );
 }

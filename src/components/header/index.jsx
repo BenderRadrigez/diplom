@@ -7,7 +7,7 @@ import Basket from "./basket";
 
 export default function Header() {
   return (
-    <div className={style.header}>
+    <header className={style.header}>
       <Link to="/">
         <img src={logo} alt="logo" className="logo" />
       </Link>
@@ -15,6 +15,6 @@ export default function Header() {
       <NavMenu />
 
       < Basket/>
-    </div>
+    </header>
   );
 }
