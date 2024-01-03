@@ -5,9 +5,9 @@ import basket from "../../../assets/images/icons/basket=empty.svg";
 export default function Basket() {
   const [count, setCount] = useState(0);
 
-  function changeOfCountforBusket(){
+  function changeOfCountforBusket() {
     // временно пока на клик по корзине позже нужно нормальную логику
-    setCount(count + 1)
+    setCount(count + 1);
   }
 
   return (

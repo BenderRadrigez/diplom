@@ -1,0 +1,19 @@
+@import "../../App.scss";
+.error {
+  padding: 2vh 2vw;
+  text-align: center;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h3 {
+      font-size: 64px;
+    }
+
+    .goHomeBtn {
+      @include greenBtn;
+    }
+  }
+}

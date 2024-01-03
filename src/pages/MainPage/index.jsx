@@ -1,8 +1,8 @@
 import React from "react";
-import Banner from "../../components/main/main_page/banner";
-import CategoriesMain from "../../components/main/main_page/categoriesMain";
-import GetDiscount from "../../components/main/main_page/get_a_discount";
-import Sales from "../../components/main/main_page/sale";
+import Banner from "../../components/banner";
+import CategoriesMain from "../../components/categoriesMain";
+import GetDiscount from "../../components/get_a_discount";
+import Sales from "../../components/sale";
 
 export default function Main() {
   return (

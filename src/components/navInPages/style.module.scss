@@ -1,0 +1,21 @@
+@import "../../App.scss";
+
+.navContainer {
+  display: flex;
+  align-items: center;
+
+  .btn {
+    color: gray;
+    font-weight: 600;
+  }
+
+  .line{
+    width: 15px;
+    height: 1px;
+    background-color: #d3d3d3;
+  }
+
+  .active{
+    color: black;
+  }
+}

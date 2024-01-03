@@ -1,10 +1,9 @@
 import React from "react";
 import insta from "../../../assets/images/icons/Instagram.svg";
 import whatsup from "../../../assets/images/icons/Whatsup.svg";
-import styles from "./style.module.scss"
-import MapsImg from "../../../assets/images/map.png"
+import styles from "./style.module.scss";
+import MapsImg from "../../../assets/images/map.png";
 import { Link } from "react-router-dom";
-
 
 export default function AboutUs() {
   return (
@@ -17,8 +16,12 @@ export default function AboutUs() {
       <div className={styles.right}>
         <p>Socials</p>
         <span className={styles.sotial}>
-          <Link to="https://instagram.com/enemyfollow"><img src={insta} alt="" /></Link>
-          <Link to="/"><img src={whatsup} alt="" /></Link>
+          <Link to="https://instagram.com/enemyfollow">
+            <img src={insta} alt="" />
+          </Link>
+          <Link to="/">
+            <img src={whatsup} alt="" />
+          </Link>
         </span>
       </div>
 
@@ -33,7 +36,7 @@ export default function AboutUs() {
       </div>
 
       <div className={styles.map}>
-      <img src={MapsImg} alt="Map" />
+        <img src={MapsImg} alt="Map" />
       </div>
     </div>
   );

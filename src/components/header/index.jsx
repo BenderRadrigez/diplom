@@ -11,10 +11,8 @@ export default function Header() {
       <Link to="/">
         <img src={logo} alt="logo" className="logo" />
       </Link>
-
       <NavMenu />
-
-      < Basket/>
+      <Basket />
     </header>
   );
 }
