@@ -1,0 +1,6 @@
+@import "../../App.scss";
+
+.addToBasketBtn{
+    @include greenBtn;
+    height: auto;
+}

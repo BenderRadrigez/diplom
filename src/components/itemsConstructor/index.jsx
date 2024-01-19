@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Mousewheel, Navigation, Pagination } from "swiper/modules";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
@@ -33,25 +33,21 @@ export default function ItemsConstructor({
     ? salesData
     : productsData;
 
-
   return isSlider ? (
     <Swiper
       className={style.slides_for_sales}
-      modules={[Navigation, Pagination]}
+      modules={[Mousewheel, Navigation, Pagination]}
       spaceBetween={30}
       slidesPerView={4}
-      navigation
-      pagination={{ clickable: true }}
+      direction={'horizontal'}
+      mousewheel={true}
+      pagination={{ clickable: true, dynamicBullets: true }}
       scrollbar={{ draggable: true }}
     >
       {items.map((item) => (
-        <SwiperSlide
-          key={item.id}
-        >
+        <SwiperSlide key={item.id}>
           {isCategories ? (
-            <ItemCategories
-              item={item}
-            />
+            <ItemCategories item={item} />
           ) : (
             <ItemProducts item={item} />
           )}
@@ -63,9 +59,7 @@ export default function ItemsConstructor({
       {items.map((item) => (
         <div key={item.id}>
           {isCategories ? (
-            <ItemCategories
-            item={item}
-          />
+            <ItemCategories item={item} />
           ) : (
             <ItemProducts item={item} />
           )}

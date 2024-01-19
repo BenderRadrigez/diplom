@@ -7,7 +7,7 @@ import Basket from "./basket";
 
 export default function Header() {
   return (
-    <header className={style.header}>
+    <header className={"header " + style.header}>
       <Link to="/">
         <img src={logo} alt="logo" className="logo" />
       </Link>

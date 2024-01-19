@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import style from "./style.module.scss";
 import { useNavigate } from "react-router-dom";
+import AddToBasketBtn from "../../../addToBasketBtn";
+import { Link } from "react-scroll";
 
 export default function ItemProducts({ item }) {
   const navigate = useNavigate();
   const [hoveredProductId, setHoveredProductId] = useState(null);
-  const [isAddedProduct, setIsAddedProduct] = useState(false);
 
   const handleMouseEnter = (productId) => {
     setHoveredProductId(productId);
@@ -13,10 +14,6 @@ export default function ItemProducts({ item }) {
 
   const handleMouseLeave = () => {
     setHoveredProductId(null);
-  };
-
-  const handleAddToBasket = () => {
-    setIsAddedProduct(true);
   };
 
   return (
@@ -33,23 +30,36 @@ export default function ItemProducts({ item }) {
             %
           </div>
         )}
-        <img
+        <Link
+          activeClass="active"
+          to="header"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={200}
+        >
+          <img
           src={`http://localhost:3333/${item.image}`}
           alt="img"
           onClick={() => navigate(`/products/${item.id}`)}
         />
+        </Link>
+        
         {hoveredProductId === item.id && (
-          <button
-            className={isAddedProduct ? style.disactive : style.active}
-            onClick={() => handleAddToBasket()}
-            disabled={isAddedProduct}
-          >
-            {isAddedProduct ? "Added" : "Add to Basket"}
-          </button>
+          <AddToBasketBtn/>
         )}
       </div>
-
-      <p onClick={() => navigate(`/products/${item.id}`)}>{item.title}</p>
+      <Link
+          activeClass="active"
+          to="header"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <p onClick={() => navigate(`/products/${item.id}`)}>{item.title}</p>
+        </Link>
+      
       {item.discont_price ? (
         <div className={style.prices}>
           <span className={style.discont_price}>${item.discont_price}</span>

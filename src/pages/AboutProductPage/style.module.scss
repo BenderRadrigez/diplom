@@ -1,0 +1,19 @@
+@import "../../App.scss";
+
+.aboutProductComteiner {
+  @include width;
+  display: flex;
+  gap: 2vw;
+
+  .imgSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+  }
+  .aboutProduct {
+    flex: 1;
+  }
+}
