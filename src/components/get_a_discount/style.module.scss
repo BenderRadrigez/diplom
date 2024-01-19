@@ -1,8 +1,7 @@
 @import "../../App.scss";
 
 .discount_section {
-  max-width: $maxWidth;
-  width: 90vw;
+  @include width;
   border-radius: 10px;
   background: linear-gradient(
     20deg,

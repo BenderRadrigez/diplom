@@ -9,8 +9,8 @@ export default function NavMenu() {
     <div className={style.buttons_nav}>
       <button onClick={() => navigate("/")}>Main Page</button>
       <button onClick={() => navigate("/categories")}>Categories</button>
-      <button onClick={() => navigate("/products")}>All products</button>
-      <button onClick={() => navigate("/products")}>All sales</button>
+      <button onClick={() => navigate("/all-products")}>All products</button>
+      <button onClick={() => navigate("/all-sales")}>All sales</button>
     </div>
   );
 }

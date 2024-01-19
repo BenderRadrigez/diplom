@@ -1,9 +1,12 @@
 import React from 'react'
+import ItemsConstructor from '../../components/itemsConstructor'
+import NavInPages from '../../components/navInPages'
 
 export default function Sales() {
   return (
     <div>
-      <div>SalesPage</div>
+      <NavInPages/>
+      <ItemsConstructor isSales={true}/>
     </div>
   )
 }

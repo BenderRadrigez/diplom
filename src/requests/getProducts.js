@@ -7,7 +7,7 @@ export const getAllProducts = createAsyncThunk(
       const response = await fetch("http://localhost:3333/products/all");
       return await response.json();
     } catch (error) {
-      console.log("Error fetching from 'getAllProducts'" + error.message);
+      console.log("Error! Can't access data from Products");
       throw error;
     }
   }

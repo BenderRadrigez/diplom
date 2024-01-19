@@ -1,0 +1,9 @@
+@import "../../App.scss";
+main{
+    @include width;
+.conteinerData{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+}}

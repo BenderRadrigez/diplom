@@ -15,11 +15,10 @@ const categoriesSlice = createSlice({
       })
       .addCase(getAllCategories.fulfilled, (state, action) => {
         state.status = "ready";
-
         state.list = action.payload;
       })
       .addCase(getAllCategories.rejected, (state) => {
-        state.status = "error ";
+        state.status = "error response getAllCategories";
       });
   },
 });

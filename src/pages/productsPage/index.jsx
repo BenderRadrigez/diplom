@@ -1,22 +1,12 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getProductsByCategory } from "../../requests/getProductsByCategory";
-import { useParams } from "react-router-dom";
-import ProductContainer from "../../components/productContainer";
+import React from "react";
 import NavInPages from "../../components/navInPages";
+import ItemsConstructor from "../../components/itemsConstructor";
 
-export default function Products() {
-  const {title} = useParams();
-  const dispatch = useDispatch();
-  useEffect(()=>{
-    dispatch(getProductsByCategory(title))
-  }, []);
-
-  
+export default function ProductsPage() {
   return (
     <div>
-      <NavInPages/>
-      <ProductContainer showDiscountedOnly={false}/>
+      <NavInPages />
+      <ItemsConstructor navItem="products"/>
     </div>
   );
 }

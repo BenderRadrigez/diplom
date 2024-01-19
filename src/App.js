@@ -6,10 +6,12 @@ import Main from "./pages/MainPage";
 import Sales from "./pages/SalesPage";
 import Footer from "./components/footer";
 import Header from "./components/header";
-import Products from "./pages/productsPage";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getAllCategories } from "./requests/getCategories";
+import ProductsFromCategory from "./pages/ProductsFromCategoryPage";
+import AboutProductPage from "./pages/AboutProductPage";
+import ProductsPage from "./pages/productsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,8 +25,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/categories" element={<Categories />} />
-        <Route path="/categories/:title" element={<Products />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/categories/:id" element={<ProductsFromCategory />} />
+        <Route path="/all-products" element={<ProductsPage />} />
+        <Route path="/products/:id" element={<AboutProductPage/>}/>
         <Route path="/all-sales" element={<Sales />} />
         <Route path="*" element={<Error />} />
       </Routes>

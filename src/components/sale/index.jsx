@@ -1,31 +1,21 @@
 import React from "react";
 import style from "./style.module.scss";
-import DataItems from "../menu_items";
+import ItemsConstructor from "../itemsConstructor";
+import { useNavigate } from "react-router-dom";
 
+// sales for mainPage
 export default function Sales() {
-  const styles = {
-    swiperStyle: style.slides_for_sales,
-    slideStyle: style.slide,
-    pricesStyle: style.prices,
-    priceStyle: style.price,
-    discont_priceStyle: style.discont_price,
-    discont_persentStyle: style.discont_persent,
-  };
+  const navigate = useNavigate();
   return (
     <div className={style.sales}>
       <div className={style.headers_h}>
         <h2>Sales</h2>
         <div className={style.line_and_button}>
           <div className={style.headers_h_line}></div>
-          <button>All Sales</button>
+          <button  onClick={() => navigate("/all-sales")}>All Sales</button>
         </div>
       </div>
-      <DataItems
-        URL={"http://localhost:3333/products/all"}
-        styles={styles}
-        isSales={true}
-        isSlider={true}
-      />
+      <ItemsConstructor isSlider={true} isSales={true} />
     </div>
   );
 }

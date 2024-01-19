@@ -1,10 +1,9 @@
 @import "../../App.scss";
 
 .categories_main {
-  max-width: $maxWidth;
-  width: 80vw;
+  @include width;
+  width: 96vw;
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 5vh;
 }

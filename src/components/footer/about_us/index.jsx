@@ -2,7 +2,6 @@ import React from "react";
 import insta from "../../../assets/images/icons/Instagram.svg";
 import whatsup from "../../../assets/images/icons/Whatsup.svg";
 import styles from "./style.module.scss";
-import MapsImg from "../../../assets/images/map.png";
 import { Link } from "react-router-dom";
 
 export default function AboutUs() {
@@ -10,7 +9,7 @@ export default function AboutUs() {
     <div className={styles.aboutUs}>
       <div className={styles.left}>
         <p>Phone</p>
-        <span>+49 999 999 99 99</span>
+        <span>+48 452 717 819</span>
       </div>
 
       <div className={styles.right}>
@@ -19,7 +18,7 @@ export default function AboutUs() {
           <Link to="https://instagram.com/enemyfollow">
             <img src={insta} alt="" />
           </Link>
-          <Link to="/">
+          <Link to="https://t.me/Curdt1">
             <img src={whatsup} alt="" />
           </Link>
         </span>
@@ -27,7 +26,7 @@ export default function AboutUs() {
 
       <div className={styles.left}>
         <p>Address</p>
-        <span>Linkstraße 2, 8 OG, 10 785, Berlin, Deutschland</span>
+        <span>Bierutowska 57B, 51-317 Wrocław</span>
       </div>
 
       <div className={styles.right}>
@@ -36,7 +35,13 @@ export default function AboutUs() {
       </div>
 
       <div className={styles.map}>
-        <img src={MapsImg} alt="Map" />
+        <iframe
+          title="tel_ran"
+          frameBorder="none"
+          width="100%"
+          height="400px"
+          src="https://maps.google.com/maps?width=500&amp;height=400&amp;hl=en&amp;q=Bierutowska%57B,%51-317%Wrocław&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        />
       </div>
     </div>
   );

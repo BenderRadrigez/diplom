@@ -1,6 +1,9 @@
 $green: #339933;
 $textSize: 64px;
-$maxWidth: 1360px;
+
+$maxWidth: 1440px;
+$minWidth: 340px;
+$widthForAllMain: (100vw - 4vw);
 
 @mixin greenBtn {
   width: 284px;
@@ -45,6 +48,12 @@ $maxWidth: 1360px;
       background: #f1f3f4;
     }
   }
+}
+
+@mixin width {
+  max-width: $maxWidth;
+  min-width: $minWidth;
+  width: $widthForAllMain;
 }
 
 @font-face {

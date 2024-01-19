@@ -1,13 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import style from "./style.module.scss";
-import DataItems from "../menu_items";
+import ItemsConstructor from "../itemsConstructor";
 
 export default function CategoriesMain() {
   const navigate = useNavigate();
-  const styles = {
-    swiperStyle: style.slides_for_categorries,
-    slideStyle: style.slide,
-  };
 
   return (
     <div className={style.categoriesMain}>
@@ -18,11 +14,7 @@ export default function CategoriesMain() {
           <button onClick={() => navigate("/categories")}>Categories</button>
         </div>
       </div>
-      <DataItems
-        URL={"http://localhost:3333/categories/all"}
-        styles={styles}
-        isSlider={true}
-      />
+      <ItemsConstructor isSlider={true} isCategories={true} />
     </div>
   );
 }

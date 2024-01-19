@@ -1,0 +1,9 @@
+@import "../../App.scss";
+.slides_for_sales {
+    margin-top: 2vw;
+    @include width;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+  }

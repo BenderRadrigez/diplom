@@ -22,6 +22,7 @@ export default function PriceFilter({ onFilterChenge }) {
     dispatch(setPriceFilter({ fromPrice, toPrice: value }));
   };
 
+  // тоже нужна оптимизация - при добавлении в список зависимостей onFilterChange сразу летит куча rerender'ов
   useEffect(() => {
     onFilterChenge({
       from: fromPrice,

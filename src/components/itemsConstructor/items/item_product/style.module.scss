@@ -1,0 +1,77 @@
+@import "../../../../App.scss";
+.slide {
+    width: 300px;
+    padding-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    text-align: center;
+    
+    .imgBlock{
+        position: relative;
+
+        .discont_persent {
+            position: absolute;
+            background: $green;
+            color: #fff;
+            width: 68px;
+            padding: 5px;
+            border-radius: 5px;
+            top: 5%;
+            right: 5%;
+            font-size: 1.2rem;
+        }
+        
+        img {
+            width: 100%;
+            height: 290px;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10%;
+            cursor: pointer;
+        }
+
+        button{
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            @include greenBtn;
+        }
+        .active:hover{
+            background: #000;
+            color: white;
+        }
+        .disactive {
+            background: white;
+            color: $green;
+        }
+        
+    }
+    p {
+      font-weight: 600;
+      width: 70%;
+      margin: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+
+    .prices {
+      display: flex;
+      gap: 20px;
+      margin: 5% 15%;
+      align-items: end;
+
+      .discont_price {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .price {
+        text-decoration: line-through;
+        font-weight: 500;
+        color: #8b8b8b;
+      }
+    }
+  }
