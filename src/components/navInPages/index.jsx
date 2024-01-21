@@ -27,7 +27,7 @@ export default function NavInPages() {
                   ind > 0
                     ? ind === buttonsList.length - 1
                       ? location.pathname
-                      : `/${buttonsList[ind]}`
+                      : `/${buttonsList[ind] === "products" ? "all-products": buttonsList[ind]}`
                     : "/"
                 }`
               )

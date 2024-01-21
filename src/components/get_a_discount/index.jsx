@@ -9,6 +9,7 @@ export default function GetDiscount({ onSubmit }) {
     email: "",
   });
   const [error, setError] = useState("");
+  const [isSubmited, setIsSubmited] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -39,6 +40,8 @@ export default function GetDiscount({ onSubmit }) {
       if (!response.ok) {
         throw new Error("Error submitting form");
       }
+
+      setIsSubmited(true);
 
       // Сброс ошибки и данных формы
       setError("");
@@ -80,7 +83,9 @@ export default function GetDiscount({ onSubmit }) {
             onChange={handleChange}
             placeholder="Email"
           />
-          <button type="submit">Get a discount</button>
+          <button className={isSubmited ? style.submited : ""} disabled={isSubmited} type="submit">
+            {isSubmited ? "Request Submitted" : "Get a discount"}
+          </button>
           {error && <p style={{ color: "red" }}>{error}</p>}
         </form>
       </div>

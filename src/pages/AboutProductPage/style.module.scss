@@ -1,95 +1,96 @@
 @import "../../App.scss";
 
 .aboutProductComteiner {
-  @include width;
-  display: flex;
-  gap: 2vw;
-
-  .imgSection {
-    flex: 1;
+  .sections {
+    @include width;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  .aboutProduct {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 5vh;
+    gap: 2vw;
 
-    .priceContent {
-      width: 50%;
+    .imgSection {
+      flex: 1;
       display: flex;
-      justify-content: start;
-      gap: 15%;
-      align-items: end;
-      position: relative;
-
-      .discontPrice {
-        font-size: 4rem;
-        font-weight: 600;
-      }
-      .price {
-        font-size: 3rem;
-        font-weight: 500;
-        color: $gray;
-        text-decoration: line-through;
-      }
-      .discontPersent {
-        position: absolute;
-        top: 0;
-        right: 0;
-        text-align: center;
-        background: $green;
-        color: #fff;
-        width: 60px;
-        padding: 5px;
-        border-radius: 5px;
-        font-size: 1.2rem;
-      }
-    }
-
-    .productsControl {
-      display: flex;
-      width: 100%;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: center;
+      gap: 10px;
+    }
+    .aboutProduct {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 5vh;
 
-      .counterOfProduct {
-        width: 40%;
-        border-radius: 5px;
+      .priceContent {
+        width: 50%;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid lightgrey;
-        border-bottom: 1px solid lightgrey;
+        justify-content: start;
+        gap: 15%;
+        align-items: end;
+        position: relative;
 
-        .counter{
-          font-size: 1.8rem;
-
+        .discontPrice {
+          font-size: 4rem;
+          font-weight: 600;
         }
-
-        button {
-          font-size: 1.5rem;
-          width: 40px;
-          aspect-ratio: 1;
-          border-radius: 5px;
-          border: none;
-          border-right: 1px solid lightgray;
-          border-left: 1px solid lightgray;
-          background-color: #fff;
+        .price {
+          font-size: 3rem;
+          font-weight: 500;
           color: $gray;
+          text-decoration: line-through;
+        }
+        .discontPersent {
+          position: absolute;
+          top: 0;
+          right: 0;
+          text-align: center;
+          background: $green;
+          color: #fff;
+          width: 60px;
+          padding: 5px;
+          border-radius: 5px;
+          font-size: 1.2rem;
+        }
+      }
+
+      .productsControl {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .counterOfProduct {
+          width: 40%;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid lightgrey;
+          border-bottom: 1px solid lightgrey;
+
+          .counter {
+            font-size: 1.8rem;
+          }
+
+          button {
+            font-size: 1.5rem;
+            width: 40px;
+            aspect-ratio: 1;
+            border-radius: 5px;
+            border: none;
+            border-right: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+            background-color: #fff;
+            color: $gray;
+          }
         }
       }
     }
-  }
 
-  .description{
-    h2{
-      margin-bottom: 3vh;
+    .description {
+      h2 {
+        margin-bottom: 3vh;
+      }
     }
   }
 }

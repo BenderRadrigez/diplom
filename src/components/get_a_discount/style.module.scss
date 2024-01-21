@@ -55,9 +55,18 @@
         font-weight: 600;
         cursor: pointer;
       }
-      button:focus {
+      button:hover {
         background: #000;
         color: #fff;
+      }
+      .submited{
+        color: $green;
+        background: #ffffff00;
+      }
+      .submited:hover{
+        color: $green;
+        background: #ffffff00;
+        cursor: default;
       }
     }
   }

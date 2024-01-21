@@ -1,0 +1,60 @@
+@import "../../App.scss";
+
+.contentSection {
+  flex: 1.5;
+  .cardForCart {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+
+    img {
+        flex: 1;
+      height: 100%;
+      border: 1px solid lightgray;
+      border-radius: 15px;
+    }
+    .info {
+        flex: 3.5;
+        text-align: start;
+      .priceContent {
+        width: 50%;
+        display: flex;
+        justify-content: start;
+        gap: 15%;
+        align-items: end;
+        position: relative;
+
+        .discontPrice {
+          font-size: 4rem;
+          font-weight: 600;
+        }
+        .price {
+          font-size: 3rem;
+          font-weight: 500;
+          color: $gray;
+          text-decoration: line-through;
+        }
+      }
+    }
+    .deleteBtn {
+        flex: 1;
+      background: none;
+      transform: translateY( -50px);
+      width: 30px;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $gray;
+      transition: color 0.5s;
+    }
+    .deleteBtn:hover {
+      color: #000;
+      font-weight: 600;
+    }
+
+  }
+}

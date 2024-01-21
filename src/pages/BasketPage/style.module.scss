@@ -1,0 +1,19 @@
+@import "../../App.scss";
+main{
+    .headers_h {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include headers_h;
+        .line_and_button{
+            width: 65%;
+        }
+      }
+
+      .content{
+        @include width;
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+      }
+}
