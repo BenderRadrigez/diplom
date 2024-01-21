@@ -20,7 +20,7 @@ export default function ImageSwiper({ arrayImagesFromServer }) {
         className={"mySwiper2 " + style.mySwiper2}
       >
         {arrayImagesFromServer.map((linkImg, ind) => (
-          <SwiperSlide className={style.swiperSlide}>
+          <SwiperSlide key={ind} className={style.swiperSlide}>
             <img key={ind} src={linkImg} alt="img" />
           </SwiperSlide>
         ))}
@@ -37,7 +37,7 @@ export default function ImageSwiper({ arrayImagesFromServer }) {
         className={"mySwiper " + style.mySwiper}
       >
         {arrayImagesFromServer.map((linkImg, ind) => (
-          <SwiperSlide className={style.slide}>
+          <SwiperSlide key={ind} className={style.slide}>
             <img key={ind} src={linkImg} alt="img" />
           </SwiperSlide>
         ))}

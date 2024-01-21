@@ -7,24 +7,28 @@ const BasketSlice = createSlice({
   initialState: {
     basketList: localStorageProduct,
     basketCounter: localStorageProduct.length,
+    count: 0,
   },
   reducers: {
-    addToCard(state, action) {
-      const productCard = state.basketList.find(
+    addToBasket(state, action) {
+      const product = state.basketList.find(
         ({ id }) => id === action.payload.id
       );
 
-      if (!productCard) {
-        state.basketList.push({ ...action.payload, count: 1 });
+      if (!product) {
+        state.basketList.push({ ...action.payload, count: state.count });
       } else {
-        productCard.count++;
+        product.count += state.count;
       }
       localStorage.setItem("product", JSON.stringify(state.basketList));
+      state.basketCounter = state.basketList.length;
+      console.log(state.count);
     },
 
     countPlus(state, action) {
       state.basketList.find((el) => el.id === action.payload).count++;
       localStorage.setItem("product", JSON.stringify(state.basketList));
+      state.basketCounter = state.basketList.length;
     },
 
     countMinus(state, action) {
@@ -36,19 +40,24 @@ const BasketSlice = createSlice({
           (el) => el.id !== action.payload
         );
       }
-
+      state.basketCounter = state.basketList.length;
       localStorage.setItem("product", JSON.stringify(state.basketList));
     },
 
-    funDelete(state, action) {
+    changeCounter(state, action){
+      state.count = action.payload;
+    },
+
+    deleteFromBasket(state, action) {
       state.basketList = state.basketList.filter(
         (el) => el.id !== action.payload
       );
+      state.basketCounter = state.basketList.length;
       localStorage.setItem("product", JSON.stringify(state.basketList));
     },
   },
 });
 
 export default BasketSlice.reducer;
-export const { addToCard, countPlus, countMinus, funDelete } =
+export const { addToBasket, countPlus, countMinus, deleteFromBasket, changeCounter } =
   BasketSlice.actions;

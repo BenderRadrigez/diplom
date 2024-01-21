@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import basket from "../../../assets/images/icons/basket=empty.svg";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addToBasket } from "../../../store/slices/basketSlice";
 
 export default function Basket() {
   const counter = useSelector((state) => state.basket.basketCounter);

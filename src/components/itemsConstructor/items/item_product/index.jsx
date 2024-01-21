@@ -46,7 +46,7 @@ export default function ItemProducts({ item }) {
         </Link>
         
         {hoveredProductId === item.id && (
-          <AddToBasketBtn/>
+          <AddToBasketBtn item={item}/>
         )}
       </div>
       <Link

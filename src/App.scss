@@ -1,4 +1,5 @@
 $green: #339933;
+$gray: #8b8b8b;
 $textSize: 64px;
 
 $maxWidth: 1440px;
@@ -38,7 +39,7 @@ $widthForAllMain: (100vw - 4vw);
       border-radius: 5px;
       border: 1px solid #ddd;
       background: none;
-      color: #8b8b8b;
+      color: $gray;
       cursor: pointer;
     }
     button:hover {
