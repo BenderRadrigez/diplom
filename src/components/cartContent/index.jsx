@@ -1,10 +1,16 @@
 import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import { useDispatch } from "react-redux";
-import { deleteFromBasket } from "../../store/slices/basketSlice";
+import {
+  deleteFromBasket,
+  countPlus,
+  countMinus,
+} from "../../store/slices/basketSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function CartContent({ listContent }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <section className={style.contentSection}>
@@ -12,8 +18,18 @@ export default function CartContent({ listContent }) {
         <div key={item.id} className={style.cardForCart}>
           <img src={`http://localhost:3333${item.image}`} alt="img" />
           <div className={style.info}>
-            <h4>{item.title}</h4>
+            <h4
+              className={style.title}
+              onClick={() => navigate(`/products/${item.id}`)}
+            >
+              {item.title}
+            </h4>
             <div className={style.priceContent}>
+              <div className={style.counterOfProduct}>
+                <button className={style.btnControl} onClick={() => dispatch(countMinus(item.id))}>-</button>
+                <span className={style.counter}>{item.count}</span>
+                <button className={style.btnControl} onClick={() => dispatch(countPlus(item.id))}>+</button>
+              </div>
               {item.discont_price && (
                 <span className={style.discontPrice}>
                   ${item.discont_price * item.count}
@@ -30,7 +46,7 @@ export default function CartContent({ listContent }) {
           </div>
           <button
             className={style.deleteBtn}
-            onClick={()=>dispatch(deleteFromBasket(item.id))}
+            onClick={() => dispatch(deleteFromBasket(item.id))}
           >
             X
           </button>
