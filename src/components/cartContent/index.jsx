@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import style from "./style.module.scss";
 import { useDispatch } from "react-redux";
 import {
@@ -26,13 +26,23 @@ export default function CartContent({ listContent }) {
             </h4>
             <div className={style.priceContent}>
               <div className={style.counterOfProduct}>
-                <button className={style.btnControl} onClick={() => dispatch(countMinus(item.id))}>-</button>
+                <button
+                  className={style.btnControl}
+                  onClick={() => dispatch(countMinus(item.id))}
+                >
+                  -
+                </button>
                 <span className={style.counter}>{item.count}</span>
-                <button className={style.btnControl} onClick={() => dispatch(countPlus(item.id))}>+</button>
+                <button
+                  className={style.btnControl}
+                  onClick={() => dispatch(countPlus(item.id))}
+                >
+                  +
+                </button>
               </div>
               {item.discont_price && (
                 <span className={style.discontPrice}>
-                  ${item.discont_price * item.count}
+                  ${+((item.discont_price * item.count).toFixed(2))}
                 </span>
               )}
               <span
@@ -40,7 +50,7 @@ export default function CartContent({ listContent }) {
                   item.discont_price ? style.price : style.discontPrice
                 }
               >
-                ${item.price * item.count}
+                ${+(item.price * item.count).toFixed(2)}
               </span>
             </div>
           </div>

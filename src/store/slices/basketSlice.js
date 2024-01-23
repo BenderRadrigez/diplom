@@ -22,7 +22,6 @@ const BasketSlice = createSlice({
       }
       localStorage.setItem("product", JSON.stringify(state.basketList));
       state.basketCounter = state.basketList.length;
-      console.log(state.count);
     },
 
     countPlus(state, action) {
@@ -55,9 +54,14 @@ const BasketSlice = createSlice({
       state.basketCounter = state.basketList.length;
       localStorage.setItem("product", JSON.stringify(state.basketList));
     },
+    deleteAllProducts(state){
+      // state.basketList = [];
+      localStorage.clear();
+      state.basketCounter = state.basketList.length;
+    }
   },
 });
 
 export default BasketSlice.reducer;
-export const { addToBasket, countPlus, countMinus, deleteFromBasket, changeCounter } =
+export const { addToBasket, countPlus, countMinus, deleteFromBasket, changeCounter, deleteAllProducts } =
   BasketSlice.actions;

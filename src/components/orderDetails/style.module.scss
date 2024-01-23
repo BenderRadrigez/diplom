@@ -2,5 +2,7 @@
 
 .orderSection{
     flex: 1;
-    background: green;
+    height: calc(200px * 3 + 2vh* 2);
+    border-radius: 15px;
+    background: #F1F3F4;
 }
