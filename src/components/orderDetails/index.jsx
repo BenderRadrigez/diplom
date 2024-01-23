@@ -1,7 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteAllProducts } from "../../store/slices/basketSlice";
+import { ConfigProvider, Modal } from "antd";
+
+const info = () => {
+  Modal.info({
+    title: "Congratulations!",
+    content: (
+      <div>
+        <p>
+          Your order has been successfully placed on the website. <br />
+          <br />
+          A manager will contact you shortly to confirm your order.
+        </p>
+      </div>
+    ),
+    onOk() {},
+  });
+};
 
 export default function OrderDetails({ onSubmit }) {
   const dispatch = useDispatch();
@@ -53,7 +70,6 @@ export default function OrderDetails({ onSubmit }) {
       setFormData({ name: "", phoneNumber: "", email: "" });
       dispatch(deleteAllProducts());
 
-      // Вызов колбэка onSubmit, если передан
       if (onSubmit) {
         onSubmit(formData);
       }
@@ -64,10 +80,12 @@ export default function OrderDetails({ onSubmit }) {
 
   return (
     <section className={style.orderSection}>
-      <h3>OrderDetails</h3>
-      <div>
-        <span>{listOfOrder.length} items Total</span>
-        <span>
+      <h3>Order details</h3>
+      <div className={style.sumOfOrder}>
+        <span className={style.countOfOrderProducts}>
+          {listOfOrder.length} items <br /> Total
+        </span>
+        <span className={style.sum}>
           $
           {listOfOrder.reduce((allprice, item) => {
             return (allprice += +(
@@ -76,38 +94,39 @@ export default function OrderDetails({ onSubmit }) {
             ).toFixed(2));
           }, 0)}
         </span>
-        <form onSubmit={handleSubmit} className={style.register_form}>
-          <input
-            name="name"
-            type="text"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Name"
-          />
-          <input
-            name="phoneNumber"
-            type="tel"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            placeholder="Phone number"
-          />
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email"
-          />
-          <button
-            className={isSubmited ? style.submited : ""}
-            disabled={isSubmited}
-            type="submit"
-          >
-            {isSubmited ? "Order Send" : "Order"}
-          </button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-        </form>
       </div>
+      <form onSubmit={handleSubmit} className={style.sendOrderForm}>
+        <input
+          name="name"
+          type="text"
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Name"
+        />
+        <input
+          name="phoneNumber"
+          type="tel"
+          value={formData.phoneNumber}
+          onChange={handleChange}
+          placeholder="Phone number"
+        />
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email"
+        />
+        <button
+          className={isSubmited ? style.submited : ""}
+          onClick={info}
+          disabled={isSubmited}
+          type="submit"
+        >
+          {isSubmited ? "The Order is Placed" : "Order"}
+        </button>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+      </form>
     </section>
   );
 }

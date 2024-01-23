@@ -55,7 +55,7 @@ const BasketSlice = createSlice({
       localStorage.setItem("product", JSON.stringify(state.basketList));
     },
     deleteAllProducts(state){
-      // state.basketList = [];
+      state.basketList = [];
       localStorage.clear();
       state.basketCounter = state.basketList.length;
     }

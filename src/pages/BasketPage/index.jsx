@@ -19,15 +19,15 @@ export default function BasketPage() {
           </button>
         </div>
       </div>
-      {basketList ? (
+      {basketList.length ? (
         <div className={style.content}>
           <CartContent  listContent={basketList}/>
           <OrderDetails />
         </div>
       ) : (
-        <div>
+        <div className={style.clearBasket}>
           <p>Looks like you have no items in your basket currently.</p>
-          <button >Continue Shopping</button>
+          <button className={style.continueBtn} onClick={() => navigate("/categories")}>Continue Shopping</button>
         </div>
       )}
     </main>

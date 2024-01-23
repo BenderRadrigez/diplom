@@ -1,19 +1,31 @@
 @import "../../App.scss";
-main{
-    .headers_h {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        @include headers_h;
-        .line_and_button{
-            width: 65%;
-        }
-      }
+main {
+  .headers_h {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include headers_h;
+    .line_and_button {
+      width: 65%;
+    }
+  }
 
-      .content{
-        @include width;
-        display: flex;
-        align-items: center;
-        gap: 2vw;
-      }
+  .content {
+    @include width;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+  }
+
+  .clearBasket {
+    @include width;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    font-weight: 600;
+    margin: 5vh;
+    .continueBtn {
+      @include greenBtn;
+    }
+  }
 }
