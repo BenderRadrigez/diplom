@@ -27,3 +27,26 @@
         }
     }   
 }
+
+@media (max-width: 540px) {
+    .swiperConteiner{
+        transform: rotateZ(0);
+        .mySwiper2{
+            width: 90vw;
+            .swiperSlide{
+                img{
+                    transform: rotateZ(0);
+                }
+            }
+        }
+        .mySwiper{
+            width: 90vw;
+            .slide{
+               
+                img{
+                    transform: rotateZ(0);
+                }
+            }
+        }   
+    }
+}

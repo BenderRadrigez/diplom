@@ -15,6 +15,22 @@
     margin: 3% 0;
   }
 
+  @media (max-width: 540px) {
+    h3{
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 740px) {
+    h3{
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 540px) {
+    h3{
+      font-size: 1.5rem;
+    }
+  }
+
   button {
     @include greenBtn;
   }

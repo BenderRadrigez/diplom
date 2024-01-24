@@ -26,6 +26,7 @@ export default function ItemsConstructor({
   const salesData = productsData.filter((el) => {
     return el.discont_price != null;
   });
+  const [width, setWidth] = useState(window.innerWidth); 
 
   const items = isCategories
     ? categoriesData
@@ -38,7 +39,7 @@ export default function ItemsConstructor({
       className={style.slides_for_sales}
       modules={[Mousewheel, Navigation, Pagination]}
       spaceBetween={30}
-      slidesPerView={4}
+      slidesPerView={width < 540 ? 1 : width < 1200 ? 2 : width < 1400? 3 : 4}
       direction={'horizontal'}
       mousewheel={true}
       pagination={{ clickable: true, dynamicBullets: true }}

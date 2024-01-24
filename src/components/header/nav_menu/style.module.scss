@@ -1,14 +1,57 @@
 @import "../../../App.scss";
 
+button {
+  background: none;
+  width: 110px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  color: $green;
+}
 .buttons_nav {
   display: flex;
-  button {
-    background: none;
-    width: 110px;
-    border: none;
-    cursor: pointer;
+}
+
+@media (min-width: 540px) {
+  .burger {
+    display: none;
   }
-  button:hover {
-    color: $green;
+}
+
+@media (max-width: 540px) {
+  .buttons_nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+    width: 60%;
+    .burgerBtn {
+      width: 100%;
+      border: none;
+      display: flex;
+      justify-content: end;
+      padding: 10px;
+      background: none;
+    }
+    .hide {
+      display: none;
+    }
+    .show {
+      z-index: 1;
+      width: 90%;
+      position: absolute;
+      background: #fff;
+      left: 5%;
+      top: 10%;
+      border: 1px solid $green;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      gap: 15px;
+      justify-content: start;
+    }
   }
 }

@@ -13,7 +13,9 @@ export default function CartContent({ listContent }) {
   const navigate = useNavigate();
 
   return (
-    <section className={style.contentSection}>
+    <section
+      className={style.contentSection}
+    >
       {listContent.map((item) => (
         <div key={item.id} className={style.cardForCart}>
           <img src={`http://localhost:3333${item.image}`} alt="img" />
@@ -42,7 +44,7 @@ export default function CartContent({ listContent }) {
               </div>
               {item.discont_price && (
                 <span className={style.discontPrice}>
-                  ${+((item.discont_price * item.count).toFixed(2))}
+                  ${+(item.discont_price * item.count).toFixed(2)}
                 </span>
               )}
               <span
