@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import style from "./style.module.scss";
 import imgBurger from "../../../assets/images/icons/Hamburger_icon.svg";
 
@@ -13,12 +13,12 @@ export default function NavMenu() {
 
   return (
     <>
-      <div className={style.buttons_nav}>
-        <button onClick={() => navigate("/")}>Main Page</button>
-        <button onClick={() => navigate("/categories")}>Categories</button>
-        <button onClick={() => navigate("/all-products")}>All products</button>
-        <button onClick={() => navigate("/all-sales")}>All sales</button>
-      </div>
+      <nav className={style.buttons_nav}>
+        <NavLink to={"/"}>Main Page</NavLink>
+        <NavLink to={"/categories"}>Categories</NavLink>
+        <NavLink to={"/all-products"}>All products</NavLink>
+        <NavLink to={"/all-sales"}>All sales</NavLink>
+      </nav>
       <div className={style.burger}>
         <button onClick={toggleMenu} className={style.burgerBtn}>
           <img className={style.burgerImg} src={imgBurger} alt="" />

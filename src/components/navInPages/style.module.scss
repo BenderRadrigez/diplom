@@ -1,9 +1,9 @@
-@import "../../App.scss";
+@use "../../App.scss" as *;
 
 .navContainer {
   display: flex;
   align-items: center;
-  margin: 3vh 0;
+  margin: 3vh;
 
   .btn {
     color: gray;

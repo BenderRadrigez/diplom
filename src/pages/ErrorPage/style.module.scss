@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../App.scss" as *;
 .error {
   padding: 2vh 2vw;
   text-align: center;

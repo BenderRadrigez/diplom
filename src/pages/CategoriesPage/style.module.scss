@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../App.scss" as *;
 
 .categories_main {
   @include width;

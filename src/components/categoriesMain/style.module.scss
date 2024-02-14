@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../App.scss" as *;
 .categoriesMain {
   align-items: center;
   display: flex;

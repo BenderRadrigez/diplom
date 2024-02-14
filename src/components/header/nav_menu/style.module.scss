@@ -1,12 +1,14 @@
-@import "../../../App.scss";
+@use "../../../App.scss" as *;
 
-button {
+a {
   background: none;
   width: 110px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  color: $gray;
 }
-button:hover {
+a:hover {
   color: $green;
 }
 .buttons_nav {

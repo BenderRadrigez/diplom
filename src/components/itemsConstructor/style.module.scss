@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../App.scss" as *;
 .slides_for_sales {
     margin-top: 2vw;
     @include width;
