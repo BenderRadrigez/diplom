@@ -14,10 +14,10 @@ export default function NavMenu() {
   return (
     <>
       <nav className={style.buttons_nav}>
-        <NavLink to={"/"}>Main Page</NavLink>
-        <NavLink to={"/categories"}>Categories</NavLink>
-        <NavLink to={"/all-products"}>All products</NavLink>
-        <NavLink to={"/all-sales"}>All sales</NavLink>
+        <NavLink className={style.navLink} to={"/"}>Main Page</NavLink>
+        <NavLink className={style.navLink} to={"/categories"}>Categories</NavLink>
+        <NavLink className={style.navLink} to={"/all-products"}>All products</NavLink>
+        <NavLink className={style.navLink} to={"/all-sales"}>All sales</NavLink>
       </nav>
       <div className={style.burger}>
         <button onClick={toggleMenu} className={style.burgerBtn}>

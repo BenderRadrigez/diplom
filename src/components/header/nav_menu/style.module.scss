@@ -1,6 +1,6 @@
 @use "../../../App.scss" as *;
 
-a {
+.navLink {
   background: none;
   width: 110px;
   border: none;
@@ -8,7 +8,7 @@ a {
   text-decoration: none;
   color: $gray;
 }
-a:hover {
+.navLink:hover {
   color: $green;
 }
 .buttons_nav {

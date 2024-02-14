@@ -1,4 +1,4 @@
-import { Button, ConfigProvider } from "antd";
+import { Button } from "antd";
 import React, { useState } from "react";
 import style from "./style.module.scss";
 import { addToBasket, changeCounter } from "../../store/slices/basketSlice";
